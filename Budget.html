@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Budget App</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  form-group {
+  margin-left: 40px;
+  }
+  </style>
+  
+</head>
+
+<body>
+<div class="container-full">
+<div class="jumbotron text-center">
+  <div>
+  Available Budget in <span class="budget__title--month">%Month%</span>
+  </div>
+  <div class="budget__value"></div>
+  <div>
+  <div style="display: inline-block">Income</div><div class="budget__income--value" style="display: inline-block; margin-left: 30px"></div>
+  </div>
+  <div>
+  <div style="display: inline-block">Expense</div><div class="budget__expense--value" style="display: inline-block; margin-left: 30px"></div>
+  </div>
+</div>
+</div>
+<div>
+<form>
+<div class="form-group row" style="padding: 20px;">
+<div class="col-xs-2">
+<select name="opr" id="opr" style="margin-left: 80px; height: 2rem;">
+    <option value="inc">+</option>
+    <option value="exp">-</option>
+  </select>
+</div>
+<div class="col-xs-2">
+<input class="form-control" style="width: 10rem; margin-left: 10px;" type="text" id="desc" placeholder="Enter Description">
+</div>
+<div class="col-xs-2">
+<input class="form-control" style="width: 5rem; margin-left: 10px;" type="text" id="val" placeholder="Value">
+</div>
+<div class="col-xs-2">
+<button type="button" id="add_btn" style="margin-left: 10px;"class="btn btn-primary">Ok</button>
+</div>
+</form>
+</div>
+<div>
+     <div class="card" style="width: 18rem;">
+			<div class="card-body">
+			<h5 class="card-title">Income Details</h5>
+			<div class="income_list">
+			</div>
+			</div>
+	</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Expense Details</h5>
+	<div class="expense_list">
+  </div>
+  </div>
+</div>
+</div>
+
+
+<script src="budgetScript.js"></script>
+</body>
+</html>
